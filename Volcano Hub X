@@ -2200,7 +2200,7 @@ end)
 infoTab:Show()
 infoTab:AddLabel("AAAAA").TextSize = 25
 infoTab:AddLabel("💬 Discord: https://discord.gg/z5JjGz2hyg").TextSize = 20
-infoTab:AddLabel("🙏 Thank you for the help Henne gave me. Henne").TextSize = 20
+infoTab:AddLabel("🙏 Made By UnoXLuna").TextSize = 20
 infoTab:AddButton("📋 Copy Discord Server link", function()
     local link = "https://discord.gg/UPcPVYYE"
     if setclipboard then
