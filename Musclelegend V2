@@ -19,7 +19,7 @@ local title = ("Volcano Hub X | Paid |  - Hello!!  %s"):format(displayName)
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/seraphimscriptmaker-seraphim/Kaizer-library-ui/refs/heads/main/KAIZER%20LIBRARY%20NEW.txt"))()
 
 local window = library:AddWindow(title, {
-    main_color = Color3.fromRGB(236, 0, 140),
+    main_color = Color3.fromRGB(255, 0, 0),
     min_size = Vector2.new(600, 800),
     can_resize = true,
 })
