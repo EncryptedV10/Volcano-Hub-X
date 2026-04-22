@@ -99,7 +99,7 @@ local localPlayer = Players.LocalPlayer
 local playerName = localPlayer.Name
 local displayName = localPlayer.DisplayName
 
-local windowTitle = "SL HUB || Public ||- " .. displayName
+local windowTitle = "Volcano Hub X || Public ||- " .. displayName
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/imhenne187/SilenceElerium/refs/heads/main/src/SilenceEleriumLibrary.luau"))()
 
@@ -2199,7 +2199,7 @@ end)
 
 infoTab:Show()
 infoTab:AddLabel("AAAAA").TextSize = 25
-infoTab:AddLabel("💬 Discord: discord.gg/HalisOntop").TextSize = 20
+infoTab:AddLabel("💬 Discord: https://discord.gg/z5JjGz2hyg").TextSize = 20
 infoTab:AddLabel("🙏 Thank you for the help Henne gave me. Henne").TextSize = 20
 infoTab:AddButton("📋 Copy Discord Server link", function()
     local link = "https://discord.gg/UPcPVYYE"
