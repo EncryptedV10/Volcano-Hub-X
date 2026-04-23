@@ -3,7 +3,7 @@ local Players = game:GetService("Players")
 
 local player = Players.LocalPlayer
 
-local CORRECT_KEY = "Uno X Luna"
+local CORRECT_KEY = "Volcano2026"
 local GET_KEY_LINK = "put ut linl here nigga"
 
 local Gui = Instance.new("ScreenGui", game.CoreGui)
@@ -103,8 +103,7 @@ Submit.MouseButton1Click:Connect(function()
 		wait(0.5)
 		TweenService:Create(Main,TweenInfo.new(0.5),{Position=UDim2.new(0.5,-200,1,300)}):Play()
 		wait(0.5)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/EncryptedV10/Volcano-Hub-X/refs/heads/main/Volcano%20Hub%20X"))()
-	else
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EncryptedV10/Volcano-Hub-X/refs/heads/main/Muscle%20Legend"))()
 		Submit.Text = "Wrong Key ❌"
 		wait(1)
 		Submit.Text = "Submit Key"
