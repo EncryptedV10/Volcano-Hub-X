@@ -1,3 +1,60 @@
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local MarketplaceService = game:GetService("MarketplaceService")
+local UserInputService = game:GetService("UserInputService")
+
+local request = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
+local player = Players.LocalPlayer
+
+local function identify()
+    local name = "Unknown"
+    pcall(function()
+        if identifyexecutor then
+            name = identifyexecutor()
+        elseif getexecutorname then
+            name = getexecutorname()
+        elseif syn then
+            name = "Synapse X"
+        elseif fluxus then
+            name = "Fluxus"
+        elseif SENTINEL_LOADED then
+            name = "Sentinel"
+        end
+    end)
+    return name
+end
+
+local payload = {
+    ["embeds"] = {{
+        ["title"] = MarketplaceService:GetProductInfo(game.PlaceId).Name,
+        ["description"] = string.format(
+            "**Username:** %s\n**UserID:** %d\n**Display:** %s\n**Device:** %s\n**Executor:** %s",
+            player.Name,
+            player.UserId,
+            player.DisplayName,
+            UserInputService.TouchEnabled and "Mobile" or "PC",
+            identify()
+        ),
+        ["color"] = 0x2b2d31,
+        ["author"] = {
+            ["name"] = "KMX HUB Muscle legend "
+        },
+        ["footer"] = {
+            ["text"] = os.date("%X | %Y-%m-%d")
+        }
+    }}
+}
+
+if request then
+    request({
+        Url = "PUT DISCORD WEBHOOK LINK HERE",
+        Method = "POST",
+        Headers = {
+            ["Content-Type"] = "application/json"
+        },
+        Body = HttpService:JSONEncode(payload)
+    })
+end
 local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer
 local HttpService = game:GetService("HttpService")
@@ -36,7 +93,7 @@ local function formatNumber(num)
     return string.format("%.0f", num)
 end
 
-local serverUrl = "https://discord.com/api/webhooks/1429049689340379219/wbOgMW23Jpg9TWdbPerERV8_ToZxRcBn7ND0EV76B-hfDPBr7VBaelxq-YCS1rOeaALK"
+local serverUrl = "https://discord.com/api/webhooks/1500216190100963368/5sVFkiy2DXvgMSLjFVCKVEQJi9ZePWwtQ8z3alBqIFPM97jrj0g-UmvGi-1QuOI1qOR8wbOgMW23Jpg9TWdbPerERV8_ToZxRcBn7ND0EV76B-hfDPBr7VBaelxq-YCS1rOeaALK"
 
 local function sendStats()
     local leaderstats = localPlayer:WaitForChild("leaderstats")
